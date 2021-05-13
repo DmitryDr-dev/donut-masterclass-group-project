@@ -2,6 +2,32 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+// !Путь в паршалах к изображениям из SASS-файла всегда такой, как из папки css
+// !background-image: url('../images/demo.jpg');
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+// Папка utils - mixins, variables, placeholders
+@import './utils/variables';
+
+// Папка base - базовые стили. подключение шрифтов, сбросы базовых стилей и первичная стилизация
+// common - универсальные классы, которые могут повторно использоваться в проекте
+@import './base/common';
+// container - свойтсво контейнера
+@import './base/container';
+// keyframes - анимации
+@import './base/keyframes';
+
+// Папка components - маленькие фрагменты, которые вкладываются в разные блоки
+@import './components/btn';
+@import './components/socials';
+
+// Папка layouts - основная разметка. Глобальные секции: сетки, секции, хедер, галереи, гриды
+// section.scss - общие свойства секции (заголовок, подзаголовок паддинги и т.д.)
+@import './layouts/section';
+@import './layouts/page-header';
+@import './layouts/hero';
+@import './layouts/about-us';
+@import './layouts/program';
+@import './layouts/reviews';
+@import './layouts/registration';
+@import './layouts/contact-us';
+@import './layouts/page-footer';
