@@ -1,0 +1,21 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  // 290px + 2 paddings
+  @media screen and (min-width: 320px) {
+    max-width: 480px;
+  }
+
+  // 6 cols * 74px + 5 gutters * 38px + 2 paddings
+  @media screen and (min-width: 768px) {
+    width: 634px;
+  }
+
+  // 8 cols * 60px + 9 gutters * 38px + 2 paddings
+  @media screen and (min-width: 1280px) {
+    width: 852px;
+  }
+}
