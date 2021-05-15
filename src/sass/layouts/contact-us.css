@@ -9,10 +9,11 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 2.7;
-
   text-align: center;
+}
 
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .contact__title {
     font-size: 36px;
     line-height: 1.8;
   }
@@ -24,10 +25,11 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 4;
-
   text-align: center;
+}
 
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .contact__subtitle {
     font-size: 18px;
     line-height: 3.6;
     margin-bottom: 27px;
@@ -41,10 +43,21 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
-
   color: rgba(171, 129, 108, 0.5);
   border: none;
   border-bottom: 1px solid #ab816c;
+}
+
+.contact__input::-webkit-input-placeholder {
+  color: rgba(171, 129, 108, 0.5);
+}
+
+.contact__input:-ms-input-placeholder {
+  color: rgba(171, 129, 108, 0.5);
+}
+
+.contact__input::-ms-input-placeholder {
+  color: rgba(171, 129, 108, 0.5);
 }
 
 .contact__input::placeholder {
@@ -63,12 +76,16 @@ textarea {
   width: 265px;
   margin-left: auto;
   margin-right: auto;
+}
 
-  @media screen and (min-width: 780px) {
+@media screen and (min-width: 780px) {
+  .contact__form {
     width: 410px;
   }
+}
 
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .contact__form {
     width: 430px;
   }
 }
@@ -76,7 +93,9 @@ textarea {
 .contact__btn {
   position: relative;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   margin-left: auto;
   margin-right: auto;
 }
+/*# sourceMappingURL=contact-us.css.map */
