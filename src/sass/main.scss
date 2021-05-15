@@ -23,11 +23,11 @@
 // Папка layouts - основная разметка. Глобальные секции: сетки, секции, хедер, галереи, гриды
 // section.scss - общие свойства секции (заголовок, подзаголовок паддинги и т.д.)
 @import './layouts/section';
-@import './layouts/page-header';
+@import './layouts/header-page.scss';
 @import './layouts/hero';
 @import './layouts/about-us';
 @import './layouts/program';
 @import './layouts/reviews';
 @import './layouts/registration';
 @import './layouts/contact-us';
-@import './layouts/page-footer';
+@import './layouts/footer-page.scss';
