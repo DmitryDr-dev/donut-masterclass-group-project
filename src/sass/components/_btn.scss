@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  min-width: 158px;
+  min-width: 145px;
   padding-top: 11px;
   padding-bottom: 11px;
   border: none;
@@ -15,6 +15,7 @@
   cursor: pointer;
 
   @media screen and (min-width: 1200px) {
+    min-width: 158px;
     font-size: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
