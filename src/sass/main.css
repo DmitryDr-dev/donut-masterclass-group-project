@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+:root {
+  --main-text-color: #2e2520;
+  --secondary-text-color: #000000;
+  --title-text-color: #2e2520;
+  --form-input-text-color: rgba(171, 129, 108, 0.5);
+  --button-text-color: #ffffff;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #fef3e4;
+  --button-bg-color: #ab816c;
+  --icon-fill-color: #2e2520;
+  --main-font: 'Montserrat', sans-serif;
+  --title-font: 'Caveat Brush', sans-serif;
+  --grid-item-qt: 2;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.219;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 634px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 852px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  min-width: 158px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.05;
+  font-family: var(--title-font);
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.section-title {
+  font-family: var(--title-font);
+  font-size: 36px;
+  line-height: 1.81;
+  color: var(--title-text-color);
+}
+
+.program__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  font-family: Caveat Brush, sans-serif;
+  font-size: 24px;
+  line-height: 2.71;
+  color: #2e2520;
+}
+
+@media screen and (max-width: 634.98px) {
+  .title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 822px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.81;
+  }
+}
+
+@media screen and (max-width: 634.98px) {
+  .program__grid:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 635px) {
+  .program__grid {
+    width: calc(100% / 6 * 3);
+  }
+}
+
+@media screen and (min-width: 822px) {
+  .program__grid {
+    width: calc(100% / 8.5 * 4);
+  }
+}
+
+.benefits--title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.28;
+  color: #000000;
+}
+
+@media screen and (min-width: 822px) {
+  .benefits--title {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.program__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 822px) {
+  .program__item {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+.program__button {
+  margin-bottom: 30px;
+  border: none;
+  font-family: Caveat Brush, sans-serif;
+  font-size: 18px;
+  line-height: 3.61;
+  color: #ab816c;
+  background: none;
+}
+
+@media screen and (min-width: 822px) {
+  .program__button {
+    display: none;
+  }
+}
+
+.program__benefits--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -6px;
+  margin-top: -60px;
+}
+
+@media screen and (min-width: 480px) {
+  .program__benefits--list {
+    margin-left: -15px;
+    margin-top: -60px;
+  }
+}
+
+@media screen and (min-width: 822px) {
+  .program__benefits--list {
+    margin-left: -30px;
+    margin-top: -60px;
+  }
+}
+
+.program__benefits--item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 6px;
+  margin-top: 60px;
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  background-color: #fef3e4;
+  -webkit-box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+          box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+}
+
+@media screen and (min-width: 480px) {
+  .program__benefits--item {
+    -ms-flex-preferred-size: calc((100% - 30px * 1) / 2);
+        flex-basis: calc((100% - 30px * 1) / 2);
+    margin-left: 15px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 822px) {
+  .program__benefits--item {
+    -ms-flex-preferred-size: calc((100% - 30px * 2) / 2);
+        flex-basis: calc((100% - 30px * 2) / 2);
+    width: 180px;
+    height: 180px;
+    margin-left: 30px;
+    margin-top: 60px;
+  }
+}
+
+.program__benefits--item:nth-child(odd) {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.program__benefits--item:nth-child(even) {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.benefits--img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.benefits--note {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (max-width: 821.98px) {
+  .benefits--note {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.icon {
+  margin-bottom: 9px;
+  width: 25px;
+  height: 20px;
+  fill: #674d40;
+}
+
+@media screen and (min-width: 822px) {
+  .icon {
+    width: 31px;
+    height: 25px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
