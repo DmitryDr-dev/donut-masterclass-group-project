@@ -117,8 +117,8 @@ p {
   display: flex;
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   justify-items: center;
   margin-top: 47px;
 }
@@ -140,11 +140,11 @@ p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   justify-items: center;
   width: 44px;
   height: 44px;
@@ -181,44 +181,31 @@ p {
   padding-bottom: 27px;
 }
 
-.contact__title {
-  font-family: Caveat Brush;
-  font-style: normal;
-  font-weight: normal;
+.section-title {
   font-size: 24px;
-  line-height: 2.7;
   text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
-  .contact__title {
+  .section-title {
     font-size: 36px;
     line-height: 1.8;
   }
 }
 
 .contact__subtitle {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 4;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 @media screen and (min-width: 1200px) {
   .contact__subtitle {
-    font-size: 18px;
-    line-height: 3.6;
     margin-bottom: 27px;
   }
 }
 
 .contact__input {
   width: 100%;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
   color: var(--form-input-text-color);
@@ -251,20 +238,20 @@ textarea {
 }
 
 .contact__form {
-  width: 265px;
+  min-width: 265px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 780px) {
   .contact__form {
-    width: 410px;
+    min-width: 410px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact__form {
-    width: 430px;
+    min-width: 430px;
   }
 }
 
@@ -272,7 +259,7 @@ textarea {
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   margin-left: auto;
   margin-right: auto;
 }
