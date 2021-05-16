@@ -1,0 +1,23 @@
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.footer-contacts__item {
+  display: flex;
+  align-items: center;
+}
+.footer-contacts__img {
+  margin-right: 6px;
+}
+.footer-contacts__link {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+.footer-contacts__img {
+  width: 14px;
+  height: 17px;
+}
