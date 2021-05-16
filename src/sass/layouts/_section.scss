@@ -14,15 +14,10 @@
 
 .section-container--bottom {
   background-image: url(../images/section-container-bottom/mobile/bg.jpg) no-repeat inherit 1;
-  background-image: url(../images/registration/tablet/donut.png) 10% 10% no-repeat fixed 2;
-  @media screen and (min-width: 780px) {
-    background-image: url(../images/registration/tablet/donut.png) 10% 10% no-repeat fixed 2;
-  }
 }
 
 .section-container--top {
   background-image: url(../images/section-container-top/mobile/bg.jpg);
-  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: inherit;
