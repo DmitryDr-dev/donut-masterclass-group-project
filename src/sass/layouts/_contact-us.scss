@@ -1,4 +1,4 @@
-.contact-us {
+.contact {
   padding-top: 27px;
   padding-bottom: 27px;
 }
@@ -46,5 +46,17 @@ textarea {
 
   @media screen and (min-width: 1200px) {
     min-width: 430px;
+  }
+}
+
+.contact__socials {
+  margin-top: 47px;
+
+  @media screen and (min-width: 780px) {
+    margin-top: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 82px;
   }
 }
