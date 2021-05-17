@@ -37,5 +37,42 @@
     <script src="./index.js"></script>
     <!-- !Скрипт для бургер меню -->
     <script src="./js/burger-menu.js"></script>
+
+  <script>
+
+    // readMore
+  function readMoreFunction() {
+  var less = document.getElementById("less");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("readMoreButton");
+  if (less.style.display === "none") {
+  less.style.display = "inline";
+  btnText.innerHTML = "Read more";
+  moreText.style.display = "none";
+  } else {
+  less.style.display = "none";
+  btnText.innerHTML = "Read less";
+  moreText.style.display = "block";
+  }
+  }
+
+  //burger
+
+    (() => {
+      const menuBtnRef = document.querySelector("[data-menu-button]");
+      const mobileMenuRef = document.querySelector("[data-menu]");
+
+      menuBtnRef.addEventListener("click", () => {
+        const expanded =
+          menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+        mobileMenuRef.classList.toggle("is-open");
+      });
+    })();
+  </script>
+
   </body>
 </html>
