@@ -48,6 +48,8 @@
   }
   .about-us__title {
     text-align: left;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
