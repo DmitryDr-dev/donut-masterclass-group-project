@@ -5,8 +5,10 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   background-color: var(--primary-bg-color);
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
+  body {
     font-size: 18px;
   }
 }
@@ -50,3 +52,4 @@ p {
   width: 1px !important;
   overflow: hidden;
 }
+/*# sourceMappingURL=common.css.map */

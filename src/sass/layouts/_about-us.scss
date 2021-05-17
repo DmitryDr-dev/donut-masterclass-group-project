@@ -1,0 +1,46 @@
+.about-us {
+}
+
+.about-us__container {
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.about-us__img-wrap {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(((100% - 30px) / 2));
+  }
+}
+
+.about-us__img {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    left: -56px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: -156px;
+  }
+}
+
+.about-us__text-wrap {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(((100% - 30px) / 2));
+  }
+}
+
+.about-us__title {
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.about-us__text {
+  margin-bottom: 30px;
+
+  &--more {
+    margin-bottom: 0;
+  }
+}
