@@ -1,0 +1,144 @@
+.registration {
+  text-align: center;
+}
+
+.registration__wrap {
+  padding: 15px 12px 45px 13px;
+  width: 100%;
+  background-color: var(--primary-bg-color);
+
+  box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+  border-radius: 150px 150px 0px 0px;
+
+  @media screen and (min-width: 768px) {
+    border-radius: 150px;
+    display: flex;
+    align-items: baseline;
+
+    justify-content: center;
+    padding: 34px 21px 34px 35px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 54px 0px 53px 0;
+  }
+}
+
+.registration__title {
+  margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.registration__title--mobile {
+  margin-bottom: 11px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.registration__info-part {
+  font-size: 18px;
+  font-weight: 500;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+  }
+}
+
+.registration__descr {
+  font-weight: 500;
+  font-size: 18px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+
+  &--day {
+    margin-bottom: 25px;
+  }
+  &--price {
+    margin-bottom: 20px;
+  }
+
+  &--break {
+    display: block;
+  }
+}
+
+.registration__form-part {
+  @media screen and (max-width: 767px) {
+    border-top: 1px solid rgba(171, 129, 108, 0.5);
+    padding-top: 11px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 19px 0 19px 30px;
+    border-left: 1px solid rgba(171, 129, 108, 0.5);
+  }
+}
+
+.registration__form {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.registration__input-part {
+  @media screen and (min-width: 768px) {
+    margin-right: 25px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 38px;
+  }
+}
+
+.registration__form-title {
+  margin-bottom: 17px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 13px;
+  }
+
+  &--break {
+    display: block;
+  }
+}
+
+.registration__form-fields {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--button-bg-color);
+  outline: none;
+
+  &::placeholder {
+    color: var(--form-input-text-color);
+  }
+
+  &:not(last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 37px;
+    }
+    margin-bottom: 0;
+  }
+
+  &._error {
+    box-shadow: 0 0 15px red;
+  }
+}
+
+.registration__btn-part {
+  align-self: center;
+}
