@@ -1,17 +1,11 @@
 .header.container {
   position: relative;
 }
+
 .header-nav {
   display: flex;
   align-items: flex-start;
 }
-//   &__list {
-//   }
-
-//   &__item + &__item {
-//     margin-left: 20px;
-//   }
-// }
 
 .logo {
   padding-top: 30px;
@@ -40,8 +34,4 @@
   & + & {
     margin-left: 20px;
   }
-}
-.header-nav__link {
-}
-.link {
 }
