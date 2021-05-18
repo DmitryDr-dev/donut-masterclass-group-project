@@ -1,3 +1,43 @@
 <!-- !Путь к изображениям из HTML-фрагмента такой, как из файла index.html -->
 <!-- <img src="images/demo.jpg" alt="" width="320" /> -->
 <!-- Для кнопки использовать класс btn -->
+<section class="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact__subtitle">We will answer any question!</p>
+    <form class="contact__form">
+      <input class="contact__input" type="email" id="email" placeholder="Email" />
+      <textarea
+        class="contact__input"
+        name="comment"
+        id="comment"
+        rows="1"
+        placeholder="Type your question"
+      ></textarea>
+      <button class="btn contact__btn" type="submit">Send</button>
+    </form>
+    <ul class="list contact__socials socials">
+      <li class="socials__item">
+        <a class="socials__link" href="" target="_blank" rel="noopener noreferrer">
+          <svg class="socials__icon" width="19" height="19">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="" target="_blank" rel="noopener noreferrer">
+          <svg class="socials__icon" width="19" height="19">
+            <use href="./images/icons.svg#icon-instagramm"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link" href="" target="_blank" rel="noopener noreferrer">
+          <svg class="socials__icon" width="19" height="19">
+            <use href="./images/icons.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

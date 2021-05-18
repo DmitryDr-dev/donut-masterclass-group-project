@@ -1,4 +1,50 @@
 <!-- !Путь к изображениям из HTML-фрагмента такой, как из файла index.html -->
 <!-- <img src="images/demo.jpg" alt="" width="320" /> -->
+<section class="registration" id="register">
+  <div class="container">
+    <h2 class="section-title registration__title">Registration</h2>
+    <div class="registration__wrap">
+      <h2 class="section-title registration__title--mobile">Registration</h2>
+      <div class="registration__info-part">
+        <p class="registration__descr--day">
+          May 23, 11:00 <span class="registration__descr--break"> New York</span>
+        </p>
+        <p class="registration__descr--price">$ 699</p>
+      </div>
 
+      <div class="registration__form-part">
+        <form action="#" id="form" class="registration__form">
+          <div class="registration__input-part">
+            <p class="registration__form-title">
+              Apply your personal info
+              <span class="registration__form-title--break"> for registration</span>
+            </p>
+            <input
+              class="registration__form-fields"
+              type="text"
+              name="user-name"
+              pattern="[a-zA-Z]{1,15}"
+              placeholder="Your name"
+            />
+            <input
+              class="registration__form-fields"
+              type="tel"
+              name="phone_number"
+              placeholder="Phone number"
+            />
+            <input
+              class="registration__form-fields"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="registration__btn-part">
+            <button type="submit" class="btn registration__btn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Для кнопки использовать класс btn -->

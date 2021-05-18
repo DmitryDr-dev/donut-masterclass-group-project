@@ -1,3 +1,12 @@
-#more {
+.about-us__text--more {
   display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.more-btn {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
