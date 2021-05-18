@@ -1,5 +1,4 @@
 :root {
-  // colors
   --main-text-color: #2e2520;
   --secondary-text-color: #000000;
   --title-text-color: #2e2520;
@@ -9,9 +8,8 @@
   --secondary-bg-color: #fef3e4;
   --button-bg-color: #ab816c;
   --icon-fill-color: #2e2520;
-  // fonts
   --main-font: 'Montserrat', sans-serif;
   --title-font: 'Caveat Brush', sans-serif;
-  // grid
   --grid-item-qt: 2;
 }
+/*# sourceMappingURL=variables.css.map */
