@@ -7,7 +7,7 @@
   text-align: center;
   margin-bottom: 24px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 27px;
   }
 }
@@ -40,11 +40,11 @@ textarea {
   margin-right: auto;
   text-align: center;
 
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: 768px) {
     min-width: 410px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     min-width: 430px;
   }
 }
@@ -52,11 +52,11 @@ textarea {
 .contact__socials {
   margin-top: 47px;
 
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: 768px) {
     margin-top: 50px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-top: 82px;
   }
 }
