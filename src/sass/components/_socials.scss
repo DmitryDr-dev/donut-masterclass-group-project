@@ -4,7 +4,9 @@
   justify-content: center;
   justify-items: center;
 }
-
+.socials {
+  display: flex;
+}
 .socials__item {
   margin-right: 10px;
 
@@ -17,14 +19,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  transition: fill var(--transform-time) var(--transform-function);
+  // width: 44px;
+  // height: 44px;
 
-  border-radius: 50%;
-  background-color: #fff;
+  // border-radius: 50%;
+  // background-color: #fff;
 
   &:hover,
   &:focus {
-    background-color: var(--form-input-text-color);
+    // background-color: var(--form-input-text-color);
+    fill: var(--button-bg-color);
   }
 }
