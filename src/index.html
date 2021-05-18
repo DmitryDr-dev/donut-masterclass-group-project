@@ -35,9 +35,9 @@
       <include src="./partials/page-footer.html"></include>
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    
+
     <script>
-        // readMore
+      // readMore
       function readMoreFunction() {
         var less = document.getElementById('less');
         var moreText = document.getElementById('more');
@@ -52,7 +52,6 @@
           moreText.style.display = 'block';
         }
       }
-
 
       // readMore Program Section
       function readMoreFunctionProgram() {
@@ -69,7 +68,7 @@
           moreProgram.style.display = 'block';
         }
       }
-      
+
       // burger
 
       (() => {
@@ -86,67 +85,50 @@
         });
       })();
 
-
-        menuBtnRef.classList.toggle("is-open");
-        menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-        mobileMenuRef.classList.toggle("is-open");
-      });
-    })();
-
-    
-    //valid form + send without reload page
-    document.addEventListener('DOMContentLoaded', () => {
+      //valid form + send without reload page
+      document.addEventListener('DOMContentLoaded', () => {
         'use strict';
 
-        const form = document.querySelector("form");
+        const form = document.querySelector('form');
 
         const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
         const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
         const regExpMail = /[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}/;
 
-        const validateElem = (elem) => {
-          if (elem.name == "user-name") {
+        const validateElem = elem => {
+          if (elem.name == 'user-name') {
             if (!regExpName.test(elem.value) && elem.value != '') {
               alert('Invalid User-name ');
             }
           }
 
-          if (elem.name == "phone-number") {
+          if (elem.name == 'phone-number') {
             if (!regExpPhone.test(elem.value) && elem.value != '') {
               alert('Please use the following phone number format: (123)123-1234 or 123-123-1234');
             }
           }
-
         };
 
         for (let elem of form.elements) {
-          if (
-            elem.tagName == 'INPUT'
-          ) {
+          if (elem.tagName == 'INPUT') {
             elem.addEventListener('blur', () => {
               validateElem(elem);
             });
           }
         }
 
-
-
-        form.addEventListener("submit", (even) => {
+        form.addEventListener('submit', even => {
           even.preventDefault();
 
           for (let elem of form.elements) {
-            if (
-              elem.tagName == 'INPUT'
-            ) {
+            if (elem.tagName == 'INPUT') {
               if (elem.value == '') {
-                alert('You have empty fields')
+                alert('You have empty fields');
               }
             }
-
           }
-        })
-      })
-  </script>
+        });
+      });
+    </script>
   </body>
 </html>
