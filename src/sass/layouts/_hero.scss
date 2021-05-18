@@ -6,26 +6,29 @@
 }
 
 .hero__title {
+  width: 224px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 3px;
-
   font-family: var(--title-font);
   font-weight: 400;
   font-size: 30px;
   line-height: 1.26;
   color: var(--title-text-color);
 
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+
   @media screen and (min-width: 1280px) {
+    width: 490px;
     margin-bottom: 15px;
     font-size: 64px;
     line-height: 1.016;
   }
 }
 
-.hero__title--break {
-  display: block;
-}
-
-.hero__author {
+.hero__subtitle {
   margin-bottom: 37px;
 
   font-weight: 500;
