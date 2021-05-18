@@ -6,8 +6,9 @@
   background-color: transparent;
   border: none;
   padding: 0;
-  transform: scale(1);
-  transition: scale 250ms lcubic-bezier(0.4, 0, 0.2, 1) inear;
+
+  fill: var(--icon-fill-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   & .icon-close {
     display: none;
@@ -21,35 +22,32 @@
   &:hover,
   &:focus {
     fill: #876655;
-    transform: scale(1.2);
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media screen and (min-width: 1280px) {
     display: none;
   }
-}
-.menu-btn-icon {
-  width: 30px;
-  height: 18px;
+  &-icon {
+    width: 30px;
+    height: 18px;
+  }
 }
 
 .mobile-menu {
   position: fixed;
-  z-index: 90;
+  display: none;
   top: 0;
   left: 0;
-  display: none;
-  overflow-y: scroll;
   width: 100%;
-  max-width: 664px;
   height: 100%;
-  max-height: 1024px;
   text-align: center;
   padding-top: 25px;
+  // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.is-open {
     display: block;
+    // transition: display 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .logo {
       padding-top: 0;
@@ -67,27 +65,29 @@
   &:hover,
   &:focus {
     color: #876655;
-    transform: scale(1.2);
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.1);
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   font-weight: 500;
   font-size: 24px;
   line-height: 1.208;
 
   transform: scale(1);
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  & + & {
+    margin-top: 45px;
+  }
 }
-.mobile-menu-nav__item + .mobile-menu-nav__item {
-  margin-top: 45px;
-}
+
 .overlay {
-  position: fixed;
-  display: none;
+  position: absolute;
+  z-index: 80;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   top: 0;
   left: 0;
 
+  overflow-y: scroll;
   background-color: rgba(254, 243, 228, 0.9);
-  // z-index: 2;
 }
