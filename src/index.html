@@ -35,37 +35,57 @@
       <include src="./partials/page-footer.html"></include>
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
-    <!-- !Скрипт для бургер меню -->
-    <script src="./js/burger-menu.js"></script>
+    
+    <script>
+        // readMore
+      function readMoreFunction() {
+        var less = document.getElementById('less');
+        var moreText = document.getElementById('more');
+        var btnText = document.getElementById('readMoreButton');
+        if (less.style.display === 'none') {
+          less.style.display = 'inline';
+          btnText.innerHTML = 'Read more';
+          moreText.style.display = 'none';
+        } else {
+          less.style.display = 'none';
+          btnText.innerHTML = 'Read less';
+          moreText.style.display = 'block';
+        }
+      }
 
-  <script>
 
-    // readMore
-  function readMoreFunction() {
-  var less = document.getElementById("less");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("readMoreButton");
-  if (less.style.display === "none") {
-  less.style.display = "inline";
-  btnText.innerHTML = "Read more";
-  moreText.style.display = "none";
-  } else {
-  less.style.display = "none";
-  btnText.innerHTML = "Read less";
-  moreText.style.display = "block";
-  }
-  }
+      // readMore Program Section
+      function readMoreFunctionProgram() {
+        var lessProgram = document.getElementById('lessProgram');
+        var moreProgram = document.getElementById('moreProgram');
+        var readMoreProgram = document.getElementById('readMoreProgram');
+        if (lessProgram.style.display === 'none') {
+          lessProgram.style.display = 'inline';
+          readMoreProgram.innerHTML = 'Read more';
+          moreProgram.style.display = 'none';
+        } else {
+          lessProgram.style.display = 'none';
+          readMoreProgram.innerHTML = 'Read less';
+          moreProgram.style.display = 'block';
+        }
+      }
+      
+      // burger
 
-  //burger
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
 
-    (() => {
-      const menuBtnRef = document.querySelector("[data-menu-button]");
-      const mobileMenuRef = document.querySelector("[data-menu]");
+        menuBtnRef.addEventListener('click', () => {
+          const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-      menuBtnRef.addEventListener("click", () => {
-        const expanded =
-          menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
+
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
+
 
         menuBtnRef.classList.toggle("is-open");
         menuBtnRef.setAttribute("aria-expanded", !expanded);
@@ -128,6 +148,5 @@
         })
       })
   </script>
-
   </body>
 </html>

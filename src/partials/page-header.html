@@ -1,3 +1,66 @@
 <!-- Чтобы скрипт корректно работал на кнопку бургера поставить атрибут data-menu-button, а на само выпадающее меню data-menu -->
-      <!-- !Путь к изображениям из HTML-фрагмента такой, как из файла index.html -->
-      <!-- <img src="images/demo.jpg" alt="" width="320" /> -->
+<!-- !Путь к изображениям из HTML-фрагмента такой, как из файла index.html -->
+<!-- <img src="images/demo.jpg" alt="" width="320" /> -->
+<header class="header">
+  <div class="container">
+    <!-- <div class="header-page"> -->
+    <nav class="header-nav">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon">
+          <use href="images/icons.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="header-nav__list list">
+        <li class="header-nav__item">
+          <a class="header-nav__link link" href="#About us">About us</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link link" href="#Program">Program</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link link" href="#Reviews">Reviews</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link link" href="#Contacts">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Кнопка меню для мобильного -->
+    <button
+      class="menu-btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-button
+    >
+      <svg class="menu-btn-icon" aria-label="Переключатель мобильного меню">
+        <use class="icon-close" href="images/icons.svg#icon-close"></use>
+        <use class="icon-menu" href="images/icons.svg#icon-menu"></use>
+      </svg>
+    </button>
+    <!-- Меню для мобильного -->
+    <div class="mobile-menu overlay" id="mobile-menu" data-menu>
+      <nav class="mobile-menu-nav">
+        <a href="index.html" class="logo">
+          <svg class="logo__icon">
+            <use href="images/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="mobile-menu-nav__list list">
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav__link link" href="#About us">About us</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav__link link" href="#Program">Program</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav__link link" href="#Reviews">Reviews</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav__link link" href="#Contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

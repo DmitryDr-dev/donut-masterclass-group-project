@@ -6,6 +6,16 @@
 }
 
 .more-btn {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 3.611;
+  text-align: center;
+  color: var(--button-bg-color);
+
   @media screen and (min-width: 1280px) {
     display: none;
   }

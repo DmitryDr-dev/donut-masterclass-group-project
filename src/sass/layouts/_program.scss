@@ -1,0 +1,116 @@
+.program__container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.program__text-wrap,
+.program__img-wrap {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+.program__desc-item {
+  &::before {
+    content: '\003e';
+    padding-right: 6px;
+  }
+}
+
+.program__text-desc {
+  margin-bottom: 30px;
+}
+
+.program__title {
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
+}
+
+.program__img-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.program-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -55px;
+  margin-right: -6px;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 425px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: -60px;
+    margin-right: -30px;
+  }
+}
+.program-benefits__item {
+  position: relative;
+  width: 142px;
+  height: 142px;
+  margin-bottom: 55px;
+  margin-right: 6px;
+  padding-top: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 60px;
+    margin-right: 30px;
+  }
+
+  &:nth-child(even) {
+    transform: translateY(25px);
+  }
+}
+.program-benefits__img {
+  top: -40px;
+  position: absolute;
+}
+
+.program-benefits__title {
+  margin-bottom: 12px;
+  font-family: var(--title-font);
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.277;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: start;
+  }
+}
+
+.program-benefits__note {
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.program-benefits__icon {
+  width: 25px;
+  height: 20px;
+  fill: #674d40;
+}
