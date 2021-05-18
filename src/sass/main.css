@@ -200,23 +200,27 @@ p {
   background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(/images/section-container-bottom/mobile/bg.svg);
 }
 
-@media screen and (min-width: 320px) {
-  .section-container--bottom {
-    background-image: url(/images/section-container-bottom/mobile/bg.jpg);
+@media screen and (min-width: 768px) {
+  .image {
+    background-image: url(/images/registration/tablet/donut.png), url(/images/registration/tablet/kisspng-party-confetti.png);
+    background-size: 200px, 300px;
+    background-repeat: no-repeat;
+    background-position: top 50px left 10px, top 150px right;
   }
 }
 
-@media screen and (min-width: 779px) {
-  .section-container--bottom {
-    background-image: url(/images/section-container-bottom/tablet/bg.jpg);
+@media screen and (min-width: 900px) {
+  .image {
+    background-position: top 50px left 70px, top 200px right 70px;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .section-container--bottom {
-    background-image: url(/images/section-container-bottom/desktop/bg.jpg);
+@media screen and (min-width: 1200px) {
+  .image {
+    background-position: top 50px left 100px, top 200px right 100px;
   }
 }
 
