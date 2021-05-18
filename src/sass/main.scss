@@ -19,12 +19,12 @@
 // Папка components - маленькие фрагменты, которые вкладываются в разные блоки
 @import './components/btn';
 @import './components/socials';
-@import './components/mobile-menu';
 
 // Папка layouts - основная разметка. Глобальные секции: сетки, секции, хедер, галереи, гриды
 // section.scss - общие свойства секции (заголовок, подзаголовок паддинги и т.д.)
 @import './layouts/section';
 @import './layouts/page-header';
+@import './layouts/mobile-menu';
 @import './layouts/hero';
 @import './layouts/about-us';
 @import './layouts/program';
