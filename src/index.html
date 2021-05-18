@@ -39,41 +39,54 @@
     <!-- !Скрипт для бургер меню -->
     <script src="./js/burger-menu.js"></script>
 
-  <script>
+    <script>
+      //burger
 
-    // readMore
-  function readMoreFunction() {
-  var less = document.getElementById("less");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("readMoreButton");
-  if (less.style.display === "none") {
-  less.style.display = "inline";
-  btnText.innerHTML = "Read more";
-  moreText.style.display = "none";
-  } else {
-  less.style.display = "none";
-  btnText.innerHTML = "Read less";
-  moreText.style.display = "block";
-  }
-  }
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
 
-  //burger
+        menuBtnRef.addEventListener('click', () => {
+          const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-    (() => {
-      const menuBtnRef = document.querySelector("[data-menu-button]");
-      const mobileMenuRef = document.querySelector("[data-menu]");
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
 
-      menuBtnRef.addEventListener("click", () => {
-        const expanded =
-          menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
 
-        menuBtnRef.classList.toggle("is-open");
-        menuBtnRef.setAttribute("aria-expanded", !expanded);
+      // readMore
+      function readMoreFunction() {
+        var less = document.getElementById('less');
+        var moreText = document.getElementById('more');
+        var btnText = document.getElementById('readMoreButton');
+        if (less.style.display === 'none') {
+          less.style.display = 'inline';
+          btnText.innerHTML = 'Read more';
+          moreText.style.display = 'none';
+        } else {
+          less.style.display = 'none';
+          btnText.innerHTML = 'Read less';
+          moreText.style.display = 'block';
+        }
+      }
 
-        mobileMenuRef.classList.toggle("is-open");
-      });
-    })();
-  </script>
-
+      // readMore Program
+      function readMoreFunctionProgram() {
+        var lessProgram = document.getElementById('lessProgram');
+        var moreProgram = document.getElementById('moreProgram');
+        var readMoreProgram = document.getElementById('readMoreProgram');
+        if (lessProgram.style.display === 'none') {
+          lessProgram.style.display = 'inline';
+          readMoreProgram.innerHTML = 'Read more';
+          moreProgram.style.display = 'none';
+        } else {
+          lessProgram.style.display = 'none';
+          readMoreProgram.innerHTML = 'Read less';
+          moreProgram.style.display = 'block';
+        }
+      }
+    </script>
   </body>
 </html>
