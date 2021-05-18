@@ -13,12 +13,37 @@
 }
 
 .section-container--bottom {
-  background-image: url(../images/section-container-bottom/mobile/bg.jpg) no-repeat inherit 1;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 320px) {
+    background-image: url(/images/section-container-bottom/mobile/bg.jpg);
+  }
+
+  @media screen and (min-width: 779px) {
+    background-image: url(/images/section-container-bottom/tablet/bg.jpg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/section-container-bottom/desktop/bg.jpg);
+  }
 }
 
 .section-container--top {
-  background-image: url(../images/section-container-top/mobile/bg.jpg);
+  background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: inherit;
+
+  @media screen and (min-width: 320px) {
+    background-image: url(/images/section-container-top/mobile/bg.jpg);
+  }
+
+  @media screen and (min-width: 779px) {
+    background-image: url(/images/section-container-top/tablet/bg.jpg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/section-container-top/desktop/bg.jpg);
+  }
 }
