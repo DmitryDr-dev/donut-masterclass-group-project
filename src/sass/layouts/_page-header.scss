@@ -12,17 +12,6 @@
 //     margin-left: 20px;
 //   }
 // }
-
-.logo {
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  &__icon {
-    width: 158px;
-    height: 71px;
-  }
-}
-
 .header-nav__list {
   display: flex;
   align-items: center;
@@ -44,4 +33,13 @@
 .header-nav__link {
 }
 .link {
+}
+.logo {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__icon {
+    width: 158px;
+    height: 71px;
+  }
 }
