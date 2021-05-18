@@ -12,6 +12,17 @@
   }
 }
 
+.program__desc-item {
+  &::before {
+    content: '\003e';
+    padding-right: 6px;
+  }
+}
+
+.program__text-desc {
+  margin-bottom: 30px;
+}
+
 .program__title {
   @media screen and (min-width: 768px) {
     text-align: start;
@@ -22,8 +33,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.list {
-}
+
 .program-benefits {
   display: flex;
   flex-wrap: wrap;
