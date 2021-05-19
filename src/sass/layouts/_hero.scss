@@ -71,5 +71,8 @@
 }
 
 .hero__social {
+  @media screen and (max-width: 767.98px) {
+    justify-content: center;
+  }
   justify-content: flex-start;
 }
