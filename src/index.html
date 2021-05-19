@@ -44,6 +44,20 @@
     <script src="./index.js"></script>
 
     <script>
+      // slider
+      $(function () {
+        $('.slider').slick({
+          arrows: false,
+          adaptiveHeight: true,
+          centerMode: true,
+          variableWidth: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        });
+      });
+
       // readMore
       function readMoreFunction() {
         var less = document.getElementById('less');
