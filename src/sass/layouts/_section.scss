@@ -11,3 +11,89 @@
     line-height: 1.81;
   }
 }
+
+.section-container--bottom {
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  background-image: url(/images/section-container-bottom/mobile/bg.svg);
+
+  @media screen and (min-width: 779px) {
+    background-image: url(/images/section-container-bottom/tablet/bg.svg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/section-container-bottom/desktop/bg.svg);
+    background-size: cover;
+  }
+}
+
+.image_bottom-container {
+  background-image: url(/images/page-footer/mobile/wheat-flour.png);
+
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @media screen and (min-width: 768px) {
+    background-image: url(/images/registration/tablet/donut.png),
+      url(/images/registration/tablet/kisspng-party-confetti.png),
+      url(/images/page-footer/tablet/wheat-flour.png);
+
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top 50px left 10px, top 150px right, bottom right;
+  }
+
+  @media screen and (min-width: 900px) {
+    background-position: top 50px left 70px, top 200px right 70px, bottom right;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/registration/desktop/donut.png),
+      url(/images/registration/desktop/kisspng-party-confetti.png),
+      url(/images/page-footer/tablet/wheat-flour.png);
+    background-position: top 50px left 100px, top 50px right, bottom right;
+  }
+}
+
+.section-container--top {
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  background-image: url(/images/section-container-top/mobile/bg.svg);
+
+  @media screen and (min-width: 779px) {
+    background-image: url(/images/section-container-top/tablet/bg.svg);
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/section-container-top/desktop/bg.svg);
+  }
+}
+
+.image_top-container {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  background-image: url(/images/hero/mobile/pic-donuts.png);
+
+  @media screen and (min-width: 780px) {
+    background-image: url(/images/hero/tablet/pic-donuts.png);
+
+    background-position: top right 137px;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/hero/desktop/pic-donuts.png);
+
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
