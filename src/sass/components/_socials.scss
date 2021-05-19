@@ -1,11 +1,25 @@
-.social-icons {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
+.social__icons {
+  // display: flex;
+  // text-align: center;
+  // justify-content: center;
+  // justify-items: center;
 }
+
+.socials__icons--mobile {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.socials__icons--desktop {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
 .socials {
   display: flex;
+  justify-content: center;
 }
 .socials__item {
   margin-right: 10px;
@@ -20,15 +34,9 @@
   justify-content: center;
   align-items: center;
   transition: fill var(--transform-time) var(--transform-function);
-  // width: 44px;
-  // height: 44px;
-
-  // border-radius: 50%;
-  // background-color: #fff;
 
   &:hover,
   &:focus {
-    // background-color: var(--form-input-text-color);
     fill: var(--button-bg-color);
   }
 }

@@ -1,4 +1,7 @@
 .about-us {
+  @media screen and (min-width: 1280px) {
+    padding-top: 66px;
+  }
 }
 
 .about-us__container {
@@ -27,7 +30,10 @@
 
 .about-us__text-wrap {
   @media screen and (min-width: 768px) {
-    flex-basis: calc(((100% - 30px) / 2));
+    flex-basis: calc(100% / 2);
+  }
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -39,8 +45,18 @@
 
 .about-us__text {
   margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 22px;
+  }
 
   &--more {
     margin-bottom: 0;
   }
+}
+
+.more-btn {
+  margin-top: -30px;
 }

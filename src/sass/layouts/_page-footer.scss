@@ -1,9 +1,14 @@
+.footer {
+  margin-bottom: 12px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 21px;
+  }
+}
+
 .footer-contacts {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 20px;
 
   &__item {
     display: flex;
@@ -11,16 +16,18 @@
     fill: var(--icon-fill-color);
     color: var(--main-text-color);
     transform: scale(1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transform-time) var(--transform-function),
+      color var(--transform-time) var(--transform-function),
+      transform var(--transform-time) var(--transform-function);
 
     &:hover,
     &:focus {
-      fill: #876655;
-      color: #876655;
+      fill: var(--button-hover-color0);
+      color: var(--button-hover-color);
       transform: scale(1.1);
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: fill var(--transform-time) var(--transform-function),
+        color var(--transform-time) var(--transform-function),
+        transform var(--transform-time) var(--transform-function);
     }
   }
   &__img {
@@ -32,5 +39,7 @@
     display: flex;
     align-items: center;
     font-style: normal;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 }
