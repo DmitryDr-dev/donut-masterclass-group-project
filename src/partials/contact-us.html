@@ -3,18 +3,20 @@
 <!-- Для кнопки использовать класс btn -->
 <section class="contact">
   <div class="container">
-    <h2 class="section-title">Contact</h2>
+    <h2 class="section-title">
+      <a name="contact">Contact</a>
+    </h2>
     <p class="contact__subtitle">We will answer any question!</p>
-    <form class="contact__form">
-      <input class="contact__input" type="email" id="email" placeholder="Email" />
+    <form action="#" id="form" class="contact__form">
+      <input class="contact__input form-field" type="email" id="email" placeholder="Email" />
       <textarea
-        class="contact__input"
+        class="contact__input form-field"
         name="comment"
         id="comment"
         rows="1"
         placeholder="Type your question"
       ></textarea>
-      <button class="btn contact__btn" type="submit">Send</button>
+      <button type="submit" class="btn contact__btn" >Send</button>
     </form>
     <ul class="list contact__socials socials">
       <li class="socials__item">
@@ -27,7 +29,7 @@
       <li class="socials__item">
         <a class="socials__link" href="" target="_blank" rel="noopener noreferrer">
           <svg class="socials__icon" width="19" height="19">
-            <use href="./images/icons.svg#icon-instagramm"></use>
+            <use href="./images/icons.svg#icon-instagram"></use>
           </svg>
         </a>
       </li>

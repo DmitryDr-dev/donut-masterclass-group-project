@@ -1,3 +1,8 @@
+.program {
+  @media screen and (min-width: 1280px) {
+    padding-top: 39px;
+  }
+}
 .program__container {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -12,6 +17,24 @@
   }
 }
 
+.program__desc-item {
+  margin-bottom: 10px;
+
+  &::before {
+    content: '\003e';
+    padding-right: 6px;
+  }
+}
+
+.program__text-desc {
+  // @media screen and (max-width: 767px) {
+
+  // }
+
+  margin-bottom: 10px;
+  // margin-bottom: 30px;
+}
+
 .program__title {
   @media screen and (min-width: 768px) {
     text-align: start;
@@ -22,8 +45,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.list {
-}
+
 .program-benefits {
   display: flex;
   flex-wrap: wrap;
@@ -103,4 +125,12 @@
   width: 25px;
   height: 20px;
   fill: #674d40;
+}
+
+.program .more-btn {
+  //это точно не правильно!!! думаю надо сделать меньше line-height у кнопки и выравнять отступами, но не совсем понимаю как это правильно сделать.
+  margin-top: -17px;
+  @media screen and (min-width: 768px) {
+    margin-top: -10px;
+  }
 }

@@ -5,6 +5,9 @@
   --title-text-color: #2e2520;
   --form-input-text-color: rgba(171, 129, 108, 0.5);
   --button-text-color: #ffffff;
+  --button-hover-color: #876655;
+  --button-active-color: #674d40;
+  --button-active-border: #000000;
   --primary-bg-color: #fffff9;
   --secondary-bg-color: #fef3e4;
   --button-bg-color: #ab816c;
@@ -14,4 +17,7 @@
   --title-font: 'Caveat Brush', sans-serif;
   // grid
   --grid-item-qt: 2;
+
+  --transform-time: 250ms;
+  --transform-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

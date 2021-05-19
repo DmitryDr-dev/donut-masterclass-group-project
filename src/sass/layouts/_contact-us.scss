@@ -1,6 +1,14 @@
 .contact {
   padding-top: 27px;
   padding-bottom: 27px;
+  @media screen and (min-width: 768px) {
+    padding-top: 51px;
+    padding-bottom: 51px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 77px;
+    padding-bottom: 35px;
+  }
 }
 
 .contact__subtitle {
@@ -12,44 +20,31 @@
   }
 }
 
-.contact__input {
-  width: 100%;
-  font-size: 16px;
-  line-height: 1.25;
-
-  color: var(--form-input-text-color);
-  border: none;
-  border-bottom: 1px solid var(--button-bg-color);
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contact__input::placeholder {
-  color: var(--form-input-text-color);
+.contact__input {
+  width: 100%;
+  margin-bottom: 27px;
+
+  @media screen and (min-width: 768px) {
+    width: 65%;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 52%;
+  }
 }
 
 textarea {
   resize: none;
 }
 
-.contact__input {
-  margin-bottom: 27px;
-}
-
-.contact__form {
-  min-width: 265px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-
-  @media screen and (min-width: 768px) {
-    min-width: 410px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    min-width: 430px;
-  }
-}
-
 .contact__socials {
+  display: flex;
+  justify-content: center;
   margin-top: 47px;
 
   @media screen and (min-width: 768px) {
