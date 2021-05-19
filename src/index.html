@@ -19,6 +19,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
       rel="stylesheet"
     />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   </head>
@@ -47,7 +49,6 @@
       // slider
       $(function () {
         $('.slider').slick({
-          arrows: false,
           adaptiveHeight: true,
           centerMode: true,
           variableWidth: true,
@@ -55,9 +56,29 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+		  arrows:false,
         });
       });
+	//   Pagination
+	// basic paging logic to demo the buttons
+		var pr = document.querySelector('.paginate.left');
+		var pl = document.querySelector('.paginate.right');
 
+		pr.onclick = slide.bind(this, -1);
+		pl.onclick = slide.bind(this, 1);
+
+		var index = 0, total = 5;
+
+		function slide(offset) {
+			index = Math.min(Math.max(index + offset, 0), total - 1);
+
+			document.querySelector('.counter').innerHTML = (index + 1) + ' / ' + total;
+
+			pr.setAttribute('data-state', index === 0 ? 'disabled' : '');
+			pl.setAttribute('data-state', index === total - 1 ? 'disabled' : '');
+		}
+
+		slide(0);
       // readMore
       function readMoreFunction() {
         var less = document.getElementById('less');
