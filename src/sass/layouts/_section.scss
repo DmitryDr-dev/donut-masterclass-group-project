@@ -25,28 +25,36 @@
 
   @media screen and (min-width: 1280px) {
     background-image: url(/images/section-container-bottom/desktop/bg.svg);
-    background-size: contain;
+    background-size: cover;
   }
 }
 
 .image_bottom-container {
+  background-image: url(/images/page-footer/mobile/wheat-flour.png);
+
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
   @media screen and (min-width: 768px) {
     background-image: url(/images/registration/tablet/donut.png),
-      url(/images/registration/tablet/kisspng-party-confetti.png);
+      url(/images/registration/tablet/kisspng-party-confetti.png),
+      url(/images/page-footer/tablet/wheat-flour.png);
 
     background-size: auto;
     background-repeat: no-repeat;
-    background-position: top 50px left 10px, top 150px right;
+    background-position: top 50px left 10px, top 150px right, bottom right;
   }
 
   @media screen and (min-width: 900px) {
-    background-position: top 50px left 70px, top 200px right 70px;
+    background-position: top 50px left 70px, top 200px right 70px, bottom right;
   }
 
   @media screen and (min-width: 1280px) {
     background-image: url(/images/registration/desktop/donut.png),
-      url(/images/registration/desktop/kisspng-party-confetti.png);
-    background-position: top 50px left 100px, top 50px right;
+      url(/images/registration/desktop/kisspng-party-confetti.png),
+      url(/images/page-footer/tablet/wheat-flour.png);
+    background-position: top 50px left 100px, top 50px right, bottom right;
   }
 }
 
