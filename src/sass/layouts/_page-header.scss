@@ -50,7 +50,6 @@
   transition: color var(--transform-time) var(--transform-function),
     transform var(--transform-time) var(--transform-function);
 
-  margin-top: 11px;
   cursor: pointer;
   &:hover,
   &:focus {
@@ -60,8 +59,8 @@
       transform var(--transform-time) var(--transform-function);
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 21px;
+    padding-bottom: 20px;
   }
 }
 
