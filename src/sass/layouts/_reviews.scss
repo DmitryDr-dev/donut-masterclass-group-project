@@ -134,14 +134,17 @@
   pointer-events: none;
 }
 .slick-arrow {
+	padding-top: 10px;
+	padding-bottom: 10px;
     position: absolute;
     bottom: 60px;
+	cursor: pointer;
 	@media screen and (min-width: 768px) {
 		bottom: 50px;
 	}
     z-index: 1;
     width: 35px;
-    height: 1px;
+    height: 2px;
     transform: translateY(-50%);
     padding: 0;
     overflow: hidden;
@@ -197,3 +200,6 @@
 	  background-color: transparent;
 	  border: 1px solid #ab816c;
   }
+
+  .slick-list.draggable {
+  padding: 0 !important;}
