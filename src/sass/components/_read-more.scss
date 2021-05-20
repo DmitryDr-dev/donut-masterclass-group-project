@@ -1,12 +1,38 @@
-.program__text-desc--more,
-.about-us__text--more {
+.read-more-state {
   display: none;
-  @media screen and (min-width: 1280px) {
-    display: block;
+}
+
+.read-more-target {
+  @media screen and (max-width: 1279.98px) {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: 0.25s ease;
   }
 }
 
-.more-btn {
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Read more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Less';
+}
+
+.read-more-state:not(:checked) ~ .read-more-wrap .about-us__text--2,
+.read-more-state:not(:checked) ~ .read-more-wrap .program__text-desc {
+  @media screen and (max-width: 1279.98px) {
+    margin-bottom: 0px;
+  }
+}
+
+.read-more-trigger {
   display: inline-block;
   border: none;
   background-color: transparent;
