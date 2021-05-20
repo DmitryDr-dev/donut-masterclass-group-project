@@ -118,7 +118,7 @@
       document.addEventListener('DOMContentLoaded', () => {
         'use strict';
 
-        const form = document.querySelector('form');
+        const form = document.querySelector('[form-regist]');
 
         const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
         const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
@@ -150,14 +150,53 @@
           even.preventDefault();
 
           for (let elem of form.elements) {
-            if (elem.tagName == 'INPUT') {
+            if (elem.name == 'user-name') {
               if (elem.value == '') {
-                alert('You have empty fields');
+                alert('Please, enter your name');
+              }
+            }
+
+             if (elem.name == 'phone-number') {
+              if (elem.value == '') {
+                alert('Please, leave your phone-number');
+              }
+            }
+
+            if (elem.name == 'email') {
+              if (elem.value == '') {
+                alert('Please, enter your e-mail adress');
               }
             }
           }
         });
       });
+
+       document.addEventListener('DOMContentLoaded', () => {
+          'use strict';
+
+          const form = document.querySelector('[form-contact]');
+
+          const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
+          const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
+          // const regExpMail = /[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}/;
+
+         form.addEventListener('submit', even => {
+            even.preventDefault();
+
+            for (let elem of form.elements) {
+              if (elem.tagName == 'INPUT') {
+                if (elem.value == '') {
+                  alert('You have empty fields');
+                }
+              }
+              if (elem.name == 'comment') {
+                if (elem.value == '') {
+                  alert('Leave your message');
+                }
+              }
+            }
+          });
+        });
     </script>
   </body>
 </html>
