@@ -46,6 +46,7 @@
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="./readmore.js"></script>
     <script>
       // readMore
       function readMoreFunction() {
@@ -156,7 +157,7 @@
               }
             }
 
-             if (elem.name == 'phone-number') {
+            if (elem.name == 'phone-number') {
               if (elem.value == '') {
                 alert('Please, leave your phone-number');
               }
@@ -171,32 +172,32 @@
         });
       });
 
-       document.addEventListener('DOMContentLoaded', () => {
-          'use strict';
+      document.addEventListener('DOMContentLoaded', () => {
+        'use strict';
 
-          const form = document.querySelector('[form-contact]');
+        const form = document.querySelector('[form-contact]');
 
-          const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
-          const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
-          // const regExpMail = /[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}/;
+        const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
+        const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
+        // const regExpMail = /[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}/;
 
-         form.addEventListener('submit', even => {
-            even.preventDefault();
+        form.addEventListener('submit', even => {
+          even.preventDefault();
 
-            for (let elem of form.elements) {
-              if (elem.tagName == 'INPUT') {
-                if (elem.value == '') {
-                  alert('You have empty fields');
-                }
-              }
-              if (elem.name == 'comment') {
-                if (elem.value == '') {
-                  alert('Leave your message');
-                }
+          for (let elem of form.elements) {
+            if (elem.tagName == 'INPUT') {
+              if (elem.value == '') {
+                alert('You have empty fields');
               }
             }
-          });
+            if (elem.name == 'comment') {
+              if (elem.value == '') {
+                alert('Leave your message');
+              }
+            }
+          }
         });
+      });
     </script>
   </body>
 </html>
