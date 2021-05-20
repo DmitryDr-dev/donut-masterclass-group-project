@@ -48,19 +48,13 @@
 }
 
 .about-us__text {
-  margin-bottom: 30px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 20px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+    }
   }
   @media screen and (min-width: 1280px) {
     margin-bottom: 22px;
   }
-
-  &--more {
-    margin-bottom: 0;
-  }
-}
-
-.more-btn {
-  margin-top: -30px;
 }
