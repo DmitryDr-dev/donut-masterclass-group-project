@@ -27,37 +27,26 @@
     <!-- <img src="images/demo.jpg" alt="" width="320" /> -->
 
     <div class="section-container--top">
-      <include src="./partials/page-header.html"></include>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/about-us.html"></include>
+      <div class="image_top-container">
+        <include src="./partials/page-header.html"></include>
+        <include src="./partials/hero.html"></include>
+        <include src="./partials/about-us.html"></include>
+      </div>
     </div>
 
     <include src="./partials/program.html"></include>
 
     <div class="section-container--bottom">
       <include src="./partials/reviews.html"></include>
-      <include src="./partials/registration.html"></include>
-      <include src="./partials/contact-us.html"></include>
-      <include src="./partials/page-footer.html"></include>
+      <div class="image_bottom-container">
+        <include src="./partials/registration.html"></include>
+        <include src="./partials/contact-us.html"></include>
+        <include src="./partials/page-footer.html"></include>
+      </div>
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
-
     <script>
-      // slider
-      $(function () {
-        $('.slider').slick({
-          arrows: false,
-          adaptiveHeight: true,
-          centerMode: true,
-          variableWidth: true,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        });
-      });
-
       // readMore
       function readMoreFunction() {
         var less = document.getElementById('less');
@@ -73,7 +62,8 @@
           moreText.style.display = 'block';
         }
       }
-
+    </script>
+    <script>
       // readMore Program Section
       function readMoreFunctionProgram() {
         var lessProgram = document.getElementById('lessProgram');
@@ -89,9 +79,25 @@
           moreProgram.style.display = 'block';
         }
       }
+    </script>
+    <script>
+      // slider
+      $(function () {
+        $('.slider').slick({
+          arrows: false,
+          adaptiveHeight: true,
+          centerMode: true,
+          variableWidth: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        });
+      });
+    </script>
 
+    <script>
       // burger
-
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');
@@ -105,7 +111,9 @@
           mobileMenuRef.classList.toggle('is-open');
         });
       })();
+    </script>
 
+    <script>
       //valid form + send without reload page
       document.addEventListener('DOMContentLoaded', () => {
         'use strict';
