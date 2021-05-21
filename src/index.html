@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Masterclass with the Donut King</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -46,8 +47,8 @@
     </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
-
     <script>
+
       // slider
       $(function () {
         $('.slider').slick({
@@ -105,7 +106,8 @@
           moreText.style.display = 'block';
         }
       }
-
+    </script>
+    <script>
       // readMore Program Section
       function readMoreFunctionProgram() {
         var lessProgram = document.getElementById('lessProgram');
@@ -121,9 +123,25 @@
           moreProgram.style.display = 'block';
         }
       }
+    </script>
+    <script>
+      // slider
+      $(function () {
+        $('.slider').slick({
+          arrows: false,
+          adaptiveHeight: true,
+          centerMode: true,
+          variableWidth: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        });
+      });
+    </script>
 
+    <script>
       // burger
-
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');
@@ -137,12 +155,14 @@
           mobileMenuRef.classList.toggle('is-open');
         });
       })();
+    </script>
 
+    <script>
       //valid form + send without reload page
       document.addEventListener('DOMContentLoaded', () => {
         'use strict';
 
-        const form = document.querySelector('form');
+        const form = document.querySelector('[form-regist]');
 
         const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
         const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
@@ -174,9 +194,48 @@
           even.preventDefault();
 
           for (let elem of form.elements) {
+            if (elem.name == 'user-name') {
+              if (elem.value == '') {
+                alert('Please, enter your name');
+              }
+            }
+
+            if (elem.name == 'phone-number') {
+              if (elem.value == '') {
+                alert('Please, leave your phone-number');
+              }
+            }
+
+            if (elem.name == 'email') {
+              if (elem.value == '') {
+                alert('Please, enter your e-mail adress');
+              }
+            }
+          }
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        'use strict';
+
+        const form = document.querySelector('[form-contact]');
+
+        const regExpName = /^[^._](?:[\w-]|\.[\w-])+[^.]$/;
+        const regExpPhone = /^(?:\(\d{3}\)|\d{3})(?: *- *)?\d{3}(?: *- *)?\d{4}$/;
+        // const regExpMail = /[A-Z0-9._%+-]+@[A-Z0-9-]+\.[A-Z]{2,4}/;
+
+        form.addEventListener('submit', even => {
+          even.preventDefault();
+
+          for (let elem of form.elements) {
             if (elem.tagName == 'INPUT') {
               if (elem.value == '') {
                 alert('You have empty fields');
+              }
+            }
+            if (elem.name == 'comment') {
+              if (elem.value == '') {
+                alert('Leave your message');
               }
             }
           }
