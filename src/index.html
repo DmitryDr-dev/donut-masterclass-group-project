@@ -49,6 +49,49 @@
     <script src="./index.js"></script>
     <script src="./readmore.js"></script>
     <script>
+
+      // slider
+      $(function () {
+        $('.slider').slick({
+          arrows: true,
+		  dots:true,
+          adaptiveHeight: true,
+          centerMode: true,
+          variableWidth: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        });
+      });
+	//   Counter-pagination
+	// var $slider = $('.slider');
+
+	// 	if ($slider.length) {
+	// 		var currentSlide;
+	// 		var slidesCount;
+	// 		var sliderCounter = document.createElement('div');
+	// 		sliderCounter.classList.add('slider__counter');
+
+	// 		var updateSliderCounter = function (slick, currentIndex) {
+	// 			currentSlide = slick.slickCurrentSlide() + 1;
+	// 			slidesCount = slick.slideCount;
+	// 			$(sliderCounter).text(currentSlide + '/' + slidesCount)
+	// 		};
+
+	// 		$slider.on('init', function (event, slick) {
+	// 			$slider.append(sliderCounter);
+	// 			updateSliderCounter(slick);
+	// 		});
+
+	// 		$slider.on('afterChange', function (event, slick, currentSlide) {
+	// 			updateSliderCounter(slick, currentSlide);
+	// 		});
+			
+
+	// 		$slider.slick();
+	// 	}	
+
       // readMore
       function readMoreFunction() {
         var less = document.getElementById('less');
