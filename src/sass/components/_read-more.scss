@@ -25,8 +25,8 @@
   content: 'Less';
 }
 
-.read-more-state:not(:checked) ~ .read-more-wrap .about-us__text--2,
-.read-more-state:not(:checked) ~ .read-more-wrap .program__text-desc {
+.read-more-state:not(:checked) ~ .read-more-wrap .about-us__text:nth-last-child(2),
+.read-more-state:not(:checked) ~ .read-more-wrap .program__text-desc:last-child {
   @media screen and (max-width: 1279.98px) {
     margin-bottom: 0px;
   }
